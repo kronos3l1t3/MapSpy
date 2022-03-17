@@ -1,5 +1,4 @@
 const express = require("express");
-const csp = require('content-security-policy');
 const app = express();
 const path = require("path");
 const publicPath = path.join(__dirname, "..", "build");
