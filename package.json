@@ -5,6 +5,7 @@
     "node": "16.x"
   },
   "dependencies": {
+    "content-security-policy": "^0.3.4",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "mapbox-gl": "^1.11.1",
