@@ -15,6 +15,7 @@ app.use(
                 ...helmet.contentSecurityPolicy.getDefaultDirectives(),
                 "default-src": ["'self'"],
                 "script-src": ["'self'", "'unsafe-inline'"],
+                "script-src-elem": ["'self'", "'unsafe-inline'"],
             },
         },
     })
