@@ -17,7 +17,7 @@
     "start-dev": "react-scripts start",
     "build": "ng start",
     "build-dev": "react-scripts build",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "npm install && npm run build"
   },
   "browserslist": {
     "production": [
