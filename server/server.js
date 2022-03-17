@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const publicPath = path.join(__dirname, "..", "build");
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3001;
 const cors = require("cors")
 
 
