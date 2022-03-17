@@ -10,20 +10,15 @@ const helmet = require("helmet");
 
 app.use(
     helmet({
-        contentSecurityPolicy: false,
+        contentSecurityPolicy: {
+            directives: {
+                ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+                "default-src": ["'self'"],
+                "script-src": ["'self'", "'unsafe-inline'"],
+            },
+        },
     })
 );
-
-const cspPolicy = {
-    'report-uri': '/reporting',
-    'default-src': csp.SRC_NONE,
-    'script-src': [ csp.SRC_SELF, csp.SRC_DATA ]
-};
-
-const globalCSP = csp.getCSP(csp.STARTER_OPTIONS);
-const localCSP = csp.getCSP(cspPolicy);
-
-app.use(globalCSP);
 
 app.use(express.static(publicPath));
 app.use(cors());
